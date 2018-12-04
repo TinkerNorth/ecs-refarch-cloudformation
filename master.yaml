@@ -52,7 +52,7 @@ Resources:
       Parameters:
         EnvironmentName: !Ref AWS::StackName
         InstanceType: t3.nano
-        ClusterSize: 4
+        ClusterSize: 1
         VPC: !GetAtt VPC.Outputs.VPC
         SecurityGroup: !GetAtt SecurityGroups.Outputs.ECSHostSecurityGroup
         Subnets: !GetAtt VPC.Outputs.PrivateSubnets
@@ -64,9 +64,9 @@ Resources:
       Parameters:
         VPC: !GetAtt VPC.Outputs.VPC
         Cluster: !GetAtt ECS.Outputs.Cluster
-        DesiredCount: 2
+        DesiredCount: 1
         Listener: !GetAtt ALB.Outputs.Listener
-        Path: /products
+        Path: /screen-sizes
 
 
   LifecycleHook:
