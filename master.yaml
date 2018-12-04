@@ -66,7 +66,7 @@ Resources:
         Cluster: !GetAtt ECS.Outputs.Cluster
         DesiredCount: 1
         Listener: !GetAtt ALB.Outputs.Listener
-        Path: /screen-sizes
+        Path: /screen_sizes
 
 
   LifecycleHook:
@@ -80,4 +80,4 @@ Resources:
 Outputs:
   ServicesScreenSizeNodeUrl:
     Description: The URL endpoint for the product service
-    Value: !Join ["/", [!GetAtt ALB.Outputs.LoadBalancerUrl, "screen-sizes"]]
+    Value: !Join ["/", [!GetAtt ALB.Outputs.LoadBalancerUrl, "screen_sizes"]]

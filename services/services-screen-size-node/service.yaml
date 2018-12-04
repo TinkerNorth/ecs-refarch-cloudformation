@@ -22,7 +22,7 @@ Parameters:
   Path:
     Description: The path to register with the Application Load Balancer
     Type: String
-    Default: /screen-sizes
+    Default: /screen_sizes
 
 Resources:
   Service:
@@ -70,7 +70,7 @@ Resources:
       Matcher:
         HttpCode: 200-299
       HealthCheckIntervalSeconds: 10
-      HealthCheckPath: /screen-sizes
+      HealthCheckPath: /screen_sizes
       HealthCheckProtocol: HTTP
       HealthCheckTimeoutSeconds: 5
       HealthyThresholdCount: 2
